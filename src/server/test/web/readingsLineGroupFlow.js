@@ -68,9 +68,9 @@ mocha.describe('readings API', () => {
                             }
                         ];
 
-                        const meterDatakWGroups = [
+                        const meterDatakWhGroups = [
                             {
-                                name: 'meterDatakWGroups',
+                                name: 'meterDatakWh',
                                 unit: 'Electric',
                                 defaultGraphicUnit: 'kW',
                                 displayable: true,
@@ -82,7 +82,7 @@ mocha.describe('readings API', () => {
                                 id: METER_ID
                             },
                             {
-                                name: 'meterDatakWOther',
+                                name: 'meterDatakWhOther',
                                 unit: 'Electric',
                                 defaultGraphicUnit: 'kW',
                                 displayable: true,
@@ -95,19 +95,19 @@ mocha.describe('readings API', () => {
                             }
                         ];
 
-                        const groupDatakW = [
+                        const groupDatakWh = [
                             {
                                 id: GROUP_ID,
-                                name: 'meterDatakWGroups + meterDatakWOther',
+                                name: 'meterDatakWh + meterDatakWhOther',
                                 displayable: true,
                                 note: 'special group',
                                 defaultGraphicUnit: 'kW',
-                                childMeters: ['meterDatakWGroups', 'meterDatakWOther'],
+                                childMeters: ['meterDatakWh', 'meterDatakWhOther'],
                                 childGroups: [],
                             }
                         ]
                         // Load the data into the database
-                        await prepareTest(unitDatakW, conversionDatakW, meterDatakWGroups, groupDatakW);
+                        await prepareTest(unitDatakW, conversionDatakW, meterDatakWhGroups, groupDatakWh);
                         // Get the unit ID since the DB could use any value.
                         const unitId = await getUnitId('kW');
                         // Load the expected response data from the corresponding csv file
@@ -249,9 +249,9 @@ mocha.describe('readings API', () => {
                             }
                         ];
 
-                        const meterDatakWGroups = [
+                        const meterDatakWhGroups = [
                             {
-                                name: 'meterDatakWGroups',
+                                name: 'meterDatakWh',
                                 unit: 'Electric',
                                 defaultGraphicUnit: 'kW',
                                 displayable: true,
@@ -263,7 +263,7 @@ mocha.describe('readings API', () => {
                                 id: METER_ID
                             },
                             {
-                                name: 'meterDatakWOther',
+                                name: 'meterDatakWhOther',
                                 unit: 'Electric',
                                 defaultGraphicUnit: 'kW',
                                 displayable: true,
@@ -276,19 +276,19 @@ mocha.describe('readings API', () => {
                             }
                         ];
 
-                        const groupDatakW = [
+                        const groupDatakWh = [
                             {
                                 id: GROUP_ID,
-                                name: 'meterDatakWGroups + meterDatakWOther',
+                                name: 'meterDatakWh + meterDatakWhOther',
                                 displayable: true,
                                 note: 'special group',
                                 defaultGraphicUnit: 'kW',
-                                childMeters: ['meterDatakWGroups', 'meterDatakWOther'],
+                                childMeters: ['meterDatakWh', 'meterDatakWhOther'],
                                 childGroups: [],
                             }
                         ]
                         // Load the data into the database
-                        await prepareTest(unitDatakW, conversionDatakW, meterDatakWGroups, groupDatakW);
+                        await prepareTest(unitDatakW, conversionDatakW, meterDatakWhGroups, groupDatakWh);
                         // Get the unit ID since the DB could use any value.
                         const unitId = await getUnitId('kW');
                         // Load the expected response data from the corresponding csv file
